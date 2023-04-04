@@ -263,12 +263,6 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
         shootBulletFromSprite(mySprite, -200, 0)
     }
 })
-controller.right.onEvent(ControllerButtonEvent.Released, function () {
-	
-})
-controller.left.onEvent(ControllerButtonEvent.Released, function () {
-	
-})
 sprites.onOverlap(SpriteKind.PlayerShot, SpriteKind.miniboss, function (sprite, otherSprite) {
     sprites.destroy(sprite, effects.clouds, 500)
     statusbars.getStatusBarAttachedTo(StatusBarKind.minibosshealth, otherSprite).value += -5
